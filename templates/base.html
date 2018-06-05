@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/main.css">
+      {% if title %}
+      <title>{{ title }} - English Learn</title>
+      {% else %}
+      <title>Welcome to English World</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>English Learn: 
+            <a href="/index">Upload</a>
+            <a href="/index">Word List</a>
+            <a href="/index">Slang List</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+        <footer id="footer">Developed by Zhenjie Hao 2018, for learning use...
+            </footer>
+    </body>
+</html>
