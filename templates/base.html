@@ -1,6 +1,13 @@
 <html>
     <head>
-        <link rel="stylesheet" href="./css/main.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
       {% if title %}
       <title>{{ title }} - English Learn</title>
       {% else %}
@@ -8,13 +15,33 @@
       {% endif %}
     </head>
     <body>
-        <div>English Learn: 
-            <a href="/index">Upload</a>
-            <a href="/index">Word List</a>
-            <a href="/index">Slang List</a></div>
-        <hr>
+            <nav>
+                    <div class="nav-wrapper">
+                      <a href="/" class="brand-logo Center">English Killer</a>
+                      <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/">Upload</a></li>
+                        <li><a href="/words">Words</a></li>
+                    
+                      </ul>
+                    </div>
+                  </nav>
+
+      
         {% block content %}{% endblock %}
-        <footer id="footer">Developed by Zhenjie Hao 2018, for learning use...
-            </footer>
+        
+        
+        <footer class="page-footer" id="footer">
+                <div class="footer-copyright">
+                  <div class="container">
+                  © 2018 Copyright Reserved by Zhenjie Hao @ CIeNET
+                  <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                  </div>
+                </div>
+              </footer>
+                  
+
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js')}}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js')}}"></script>
     </body>
 </html>

@@ -13,7 +13,7 @@ def uploadWord(word):
    
     result = list.insert_one(word)
     print('One post: {0}'.format(result.inserted_id))
-    return 'success!'
+    return 1
 
 def fetch_words():
     db = mongodb_client.get_db()

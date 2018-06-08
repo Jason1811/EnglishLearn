@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <div class="container">
+        <h2>Word List</h2>
+        <div class="row">
+    {% for item in words %}
+
+    <div class="col s4 m4">
+            <h3 class="header">{{item.word}}</h3>
+            <div class="card horizontal">
+              
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>{{item.mean}}</p>
+                  <p>{{item.note}}</p>
+                </div>
+                <div class="card-action">
+                  <i class="material-icons">hearing</i>
+                </div>
+              </div>
+            </div>
+          </div>    
+    {% endfor %}
+    </div>
+  </div>
+{% endblock %}

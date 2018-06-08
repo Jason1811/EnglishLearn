@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div class="container">
     <h1>Hi, {{ user.username }}!</h1>
     {% for post in posts %}
     <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
+
+
+    <form action="/newword" method="POST">
+        <span class="blue-text text-darken-2">Word:</span> <input type="text" name="word" ><br>
+        <span class="blue-text text-darken-2">Meaning:</span> <input type="text" name="mean"><br>
+        <span class="blue-text text-darken-2">note:</span> <input type="text" name="note"><br>
+        
+        <button id ="upload" class="btn waves-effect waves-light"  name="action">Upload
+                <i class="material-icons right">send</i>
+              </button>
+        </form>
+        </div>
 {% endblock %}
